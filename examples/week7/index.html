@@ -4,7 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind CSS 練習</title>
-
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+      /* # > . id > class */
+      .strong { 
+        color: #363;
+        font-weight:900;
+        font-size: xx-large;
+      }
+      #leading-2 {
+        color: #083b5433;
+        font-weight:900;
+        font-size: xx-large;
+      }
+    </style>
     <!-- 
     步驟一：引入 Tailwind CSS
     請將以下程式碼加入到 head 標籤中：
@@ -18,11 +31,11 @@
   </head>
   <body>
     <!-- 導航列 -->
-    <nav>
-      <div>
+    <nav class ="px-6 py-4 border -b mb-12 " >
+      <div class="flex  justify-between items-center">
         <img src="https://placehold.jp/100x50.png" alt="Logo" />
-        <ul>
-          <li><a href="#">首頁</a></li>
+        <ul class = "flex gap-x-4">
+          <li class="text-red-600"><a href="#">首頁</a></li>
           <li><a href="#">關於我們</a></li>
           <li><a href="#">服務項目</a></li>
           <li><a href="#">聯絡資訊</a></li>
@@ -33,7 +46,7 @@
     <!-- 首頁橫幅 -->
     <header>
       <h1>探索 Tailwind CSS 的魅力</h1>
-      <p>透過實作學習現代化的 CSS 框架</p>
+      <p id ="leading" class = "strong">透過實作學習現代化的 CSS 框架</p>
       <div>
         <button>開始學習</button>
         <button>觀看教學</button>
@@ -49,17 +62,17 @@
           <div>
             <img src="https://placehold.jp/150x150.png" alt="圖示 1" />
             <h3>快速開發</h3>
-            <p>使用 Utility-First 的方法，加速開發流程</p>
+            <p id="leading-2" class = "strong">使用 Utility-First 的方法，加速開發流程</p>
           </div>
           <div>
             <img src="https://placehold.jp/150x150.png" alt="圖示 2" />
             <h3>響應式設計</h3>
-            <p>輕鬆打造適配各種螢幕尺寸的網站</p>
+            <p class = "strong">輕鬆打造適配各種螢幕尺寸的網站</p>
           </div>
           <div>
             <img src="https://placehold.jp/150x150.png" alt="圖示 3" />
             <h3>客製化設計</h3>
-            <p>依據需求打造獨特的使用者介面</p>
+            <p class = "strong">依據需求打造獨特的使用者介面</p>
           </div>
         </div>
       </section>
